@@ -20,7 +20,7 @@ def webhook():
             asyncio.run(app_telegram.bot.send_message(chat_id=CHAT_ID, text=text, parse_mode=constants.ParseMode.HTML))
             return 'Messaggio inviato ✅', 200
         except Exception as e:
-            return f'Errore nell'invio: {str(e)}', 500
+            return f"Errore nell'invio: {str(e)}", 500
     return 'Dati non validi ❌', 400
 
 @app.route('/', methods=['GET'])
